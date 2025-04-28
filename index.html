@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>张园 | 个人主页</title>
+<style>
+body { margin:0; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background:#f4f4f4; color:#333; }
+
+/* 新增顶部三行布局 */
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #e0e0e0;
+  padding: 10px 30px;
+  font-size: 0.9em;
+}
+.top-bar a { color: #333; text-decoration: none; margin-left: 10px; }
+.top-bar a:hover { text-decoration: underline; }
+
+.school-banner {
+  background: linear-gradient(to right, #990000 300px, #000 0);
+  color: white;
+  display: flex;
+  align-items: center;
+  height: 60px;
+  padding-left: 30px;
+  font-size: 1.5em;
+  position: relative;
+}
+.school-banner .school-name {
+  background: #990000;
+  padding: 5px 15px;
+  margin-right: 10px;
+}
+.school-banner .college-name {
+  background: #000;
+  padding: 5px 15px;
+}
+
+.nav-bar {
+  background: #e0e0e0;
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+}
+.nav-bar a {
+  color: #333;
+  text-decoration: none;
+  margin: 0 20px;
+  font-weight: bold;
+}
+.nav-bar a:hover { text-decoration: underline; }
+
+/* 原有内容布局调整 */
+.container { display:flex; flex-wrap:wrap; max-width:1400px; margin:30px auto; padding:20px; background:white; box-shadow:0 0 10px rgba(0,0,0,0.1); }
+.left-column { flex:1; min-width:300px; text-align:center; padding:20px; }
+.left-column img { width:200px; height:200px; object-fit:cover; border-radius:50%; border:3px solid #990000; }
+.left-column .buttons a { display:block; background:#990000; color:white; margin:10px auto; padding:10px; text-decoration:none; width:80%; border-radius:5px; }
+.right-column { flex:3; min-width:600px; padding:20px; }
+h2 { border-bottom:2px solid #990000; padding-bottom:5px; }
+.accordion { background:#eee; cursor:pointer; padding:15px; width:100%; border:none; text-align:left; font-size:16px; transition:background-color 0.3s ease; margin-top:10px; }
+.active, .accordion:hover { background:#ccc; }
+.panel { max-height:0; overflow:hidden; transition:max-height 0.5s ease-out, padding 0.5s ease; border-left:2px solid #990000; background:#fafafa; margin-bottom:10px; }
+.panel ul { padding:10px 20px; margin:0; }
+footer { background:#222; color:white; text-align:center; padding:20px; margin-top:40px; }
+</style>
+</head>
+<body>
+
+<!-- 顶部三行布局 -->
+<div class="top-bar">
+  <div>AHPU.EDU</div>
+  <div>
+    <a href="#">微博</a> |
+    <a href="#">小红书</a> |
+    <a href="#">知乎</a>
+  </div>
+</div>
+
+<div class="school-banner">
+  <div class="school-name">
+    <a href="https://www.ahpu.edu.cn/" target="_blank" style="color: white; text-decoration: none;">安徽工程大学</a>
+  </div>
+  <div class="college-name">
+    <a href="https://sme.ahpu.edu.cn/" target="_blank" style="color: white; text-decoration: none;">机械与汽车工程学院</a>
+  </div>
+</div>
+
+
+<div class="nav-bar">
+  <a href="#">课程</a>
+  <a href="#">研究生</a>
+  <a href="#">实验室介绍</a>
+  <a href="#">Faculty & Research</a>
+</div>
+
+<!-- 正文内容 -->
+<div class="container">
+  <div class="left-column">
+     <img src="yuanzhang.github.io/your-photo.jpg" alt="张园照片" style="width:200px; height:240px; object-fit:cover; border-radius:8px; border:3px solid #990000; box-shadow:0 2px 8px rgba(0,0,0,0.15);">
+
+    <div class="info" style="text-align:left; margin-top: 20px; font-size: 0.95em;">
+        <p><strong>讲师, 车辆工程系</strong></p>
+        <p>安徽工程大学，省重点实验室</p>
+        <p>安徽芜湖<br>北京中路8号</p>
+        <p><strong>Phone:</strong> (614) 247-6306</p>
+        <p><strong>Email:</strong> yuanzhang@ahpu.edu.cn;yuanzhang@tongji.edu.cn</p>
+    </div>
+
+    <div class="buttons" style="margin-top: 20px;">
+        <a href="your-cv.pdf" download>Download CV</a>
+        <a href="https://your-webpage-link.com" target="_blank">Webpage</a>
+        <a href="https://your-aspin-lab-link.com" target="_blank">ASPIN Lab</a>
+        <a href="https://your-carmen-utc-link.com" target="_blank">CARMEN UTC</a>
+    </div>
+  </div>
+
+  <div class="right-column">
+    <section>
+      <h2>Biography</h2>
+      <p>张园博士，现任安徽工程大学讲师，博士毕业于同济大学。研究方向为GNSS/5G与多传感器融合定位，第一作者发表IEEE 论文多篇，其中一区论文三篇，参与多项国家级科研项目。</p>
+    </section>
+
+ 
+
+    <button class="accordion">Publications</button>
+    <div class="panel">
+      <ul>
+        <li>Y. Zhang, R. Wang and E. Liu, "Cooperative UAVs Placement Optimization for Best Multistatic Time-of-Arrival Localization in 5G Networks," in IEEE Transactions on Wireless Communications, vol. 24, no. 4, pp. 3561-3574, April 2025.</li>
+        <li>Y. Zhang, R. Wang and Z. Xing, "A Robust Evolutionary Particle Filter Technique for Integrated Navigation in Urban Environments via GNSS and 5G Signals," in IEEE Transactions on Industrial Informatics, vol. 20, no. 4, pp. 6866-6878, April 2024.</li>
+        <li>Y. Zhang, R. Wang, E. Liu, B. Li and H. Ge, "Asynchronous Time-of-Arrival-Based 5G Localization: Methods and Optimal Geometry Analysis," in IEEE Internet of Things Journal, vol. 11, no. 20, pp. 33994-34008, 15 Oct.15, 2024.</li>
+        <li>Y. Zhang, X. Tan and C. Zhao, "UWB/INS Integrated Pedestrian Positioning for Robust Indoor Environments," in IEEE Sensors Journal, vol. 20, no. 23, pp. 14401-14409, 1 Dec.1, 2020.</li>
+        <li>Y. Zhang, R. Wang and Z. Xing, "Collaborative Navigation in Urban Environments via GNSS and 5G Signals," ICC 2023 - IEEE International Conference on Communications, Rome, Italy, 2023, pp. 6275-6280.</li>
+        <li>张园,赵长胜,李晓明. 融合动量BP算法的样本数自适应粒子滤波 [J]. 小型微型计算机系统, 2019, 40 (08): 1612-1616.</li>
+        <li>张园,谭兴龙,赵长胜等. 顾及有色噪声的自适应粒子滤波UWB定位算法 [J]. 测绘通报, 2019, (08): 30-33. </li>
+        <li>张园,赵长胜,李晓明. 一种基于动量BP算法的似然分布自适应粒子滤波 [J]. 小型微型计算机系统, 2019, 40 (10): 2058-2062.</li>
+      </ul>
+    </div>
+
+   <button class="accordion">Awards</button>
+    <div class="panel">
+      <ul>
+        <li>研究生国家奖学金（2019）</li>
+        <li>校级优秀毕业生（2020）</li>
+      </ul>
+    </div>
+
+    <button class="accordion">Graduate Students</button>
+    <div class="panel">
+      <ul>
+        <li>欢迎对GNSS/5G融合定位、GNSS/INS/UWB融合定位、UAV轨迹优化感兴趣的研究生加入！</li>
+      </ul>
+    </div>
+
+    <button class="accordion">Sponsored Projects</button>
+    <div class="panel">
+      <ul>
+        <li>江苏省研究生创新项目（主持）</li>
+        <li>国家自然基金项目（参与）</li>
+      </ul>
+    </div>
+
+    <section>
+      <h2>Expertise</h2>
+      <ul>
+        <li>GNSS/5G融合导航定位，GNSS/INS/UWB融合定位</li>
+        <li>UAV协同定位与轨迹优化</li>
+        <li>粒子滤波、卡尔曼滤波、凸优化算法</li>
+      </ul>
+    </section>
+  </div>
+</div>
+
+<footer>
+  &copy; 2025 张园 | 安徽工程大学机械与汽车工程学院
+</footer>
+
+<script>
+var acc = document.getElementsByClassName("accordion");
+for (var i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.maxHeight) {
+      panel.style.maxHeight = null;
+      panel.style.paddingTop = '0';
+      panel.style.paddingBottom = '0';
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+      panel.style.paddingTop = '10px';
+      panel.style.paddingBottom = '10px';
+    }
+  });
+}
+</script>
+
+</body>
+</html>
